@@ -1,0 +1,20 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: i want ping all nodes
+    ping:
+
+  - name: i want install git
+    apt:
+     name: git
+
+
+  - name: i want install tree
+    apt:
+     name: tree
+
+  - name: i want install webserver
+    apt:
+      name: apache2
+      state: present
