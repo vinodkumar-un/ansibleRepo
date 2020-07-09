@@ -20,5 +20,5 @@
   - name: i want to start webserver on RedHat
     service:
      name: "{{webserveronubuntu}}"
-     state: started
+     state: present
     when: ansible_os_family == "RedHat"
