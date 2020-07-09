@@ -14,11 +14,11 @@
     when: ansible_os_family == "Debian"
   - name: i want to install webserver on RedHat
     yum:
-      name: httpd
-      state: present
+      name: "{{webserveronubuntu}}"
+      state: absent
     when: ansible_os_family == "RedHat"
   - name: i want to start webserver on RedHat
     service:
-     name: httpd
-     state: started
+     name: "{{webserveronubuntu}}"
+     state: absent
     when: ansible_os_family == "RedHat"
