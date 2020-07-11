@@ -1,5 +1,5 @@
 ---
-- hosts: mydbservers
+- hosts: webservers
   become: yes
   tasks:
   - name: i want to install webserver on ubuntu
@@ -7,16 +7,19 @@
       name: apache2
       state: present
     when: ansible_os_family == "Debian"
+    
   - name: i want start webserver on ubuntu
     service:
      name: apache2
      state: started
     when: ansible_os_family == "Debian"
+
   - name: i want to install webserver on RedHat
     yum:
       name: "{{webserveronubuntu}}"
       state: present
     when: ansible_os_family == "RedHat"
+
   - name: i want to start webserver on RedHat
     service:
      name: "{{webserveronubuntu}}"
