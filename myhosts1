@@ -1,0 +1,11 @@
+
+[mywebservers]
+172.31.38.156
+
+[mydbservers]
+172.31.34.6
+
+
+[mydbservers:vars]
+#webserveronubuntu=httpd
+

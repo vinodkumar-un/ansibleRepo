@@ -1,13 +1,13 @@
-
 [mywebservers]
 172.31.38.156
-
-[mydbservers]
 172.31.34.6
 
+[myappservers]
+172.31.5.55
+172.31.6.65
 
+[ubuntuservers]
+172.31.38.156
 
-
-[mydbservers:vars]
-
-webserveronubuntu=httpd
+[redhatservers]
+172.31.34.6
