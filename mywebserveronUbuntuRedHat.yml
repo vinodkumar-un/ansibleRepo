@@ -16,12 +16,12 @@
 
   - name: i want to install webserver on RedHat
     yum:
-      name: "{{webserveronubuntu}}"
+      name: "{{webserveronredhat}}"
       state: present
     when: ansible_os_family == "RedHat"
 
   - name: i want to start webserver on RedHat
     service:
-     name: "{{webserveronubuntu}}"
+     name: "{{webserveronredhat}}"
      state: started
     when: ansible_os_family == "RedHat"

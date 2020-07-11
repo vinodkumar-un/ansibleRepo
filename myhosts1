@@ -7,5 +7,5 @@
 
 
 [mydbservers:vars]
-webserveronubuntu=httpd
+webserveronredhat=httpd
 
