@@ -1,0 +1,6 @@
+---
+- name: download my tom tar file
+  get_url:
+    url: https://downloads.apache.org/tomcat/tomcat-8/v8.5.57/bin/apache-tomcat-8.5.57.tar.gz
+    dest: /home/ubuntu/apache-tomcat-8.5.57.tar.gz
+    force_basic_auth: yes
