@@ -9,8 +9,8 @@
 
 - name: change mode for read
   file:
-    path: /opt/tomcat/conf
-    state: touch
+    path: /opt/tomcat/conf/
+    state: directory
     mode: g+r
     recurse: yes
 
