@@ -5,11 +5,17 @@
     state: directory
     mode: '0755'
 
+#- name: tomcat tar file extract
+#  unarchive:
+#    src: /home/ubuntu/apache-tomcat-8.5.57.tar.gz
+#    dest: /opt/tomcat
+#    extra_opts: [--strip-components=1]
+#    remote_src: yes
+
+# alternate above playbook
 
 - name: tomcat tar file extract
-  unarchive:
-    src: /home/ubuntu/apache-tomcat-8.5.57.tar.gz
-    dest: /opt/tomcat
-    extra_opts: [--strip-components=1]
-    remote_src: yes
+  command:
+    cmd: tar xzvf /home/ubuntu/apache-tomcat-8.5.57.tar.gz -C /opt/tomcat --strip-components=1  
+    creates: /opt/tomcat
   
